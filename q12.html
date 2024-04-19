@@ -1,0 +1,33 @@
+<html>
+<script type="text/javascript">
+    /*
+    12. Write a javascript program array  create 2d array and print below result.
+        let arr = [
+                [1,2,3],
+                [4,5,6],
+                [7,8,9]
+        ]
+        ans :- [3,2,1,4,5,6,9,8,7]
+    */
+
+    let arr = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]]
+    let ans = [];
+    let tmp = 0;
+    for (let i = 0; i < 3; i++) {
+        if (i % 2 == 0) {
+            for (let j = arr.length - 1; j >= 0; j--) {
+                ans[tmp++] = arr[i][j]
+            }
+        } else {
+            for (let j = 0; j < arr.length; j++) {
+                ans[tmp++] = arr[i][j]
+            }
+        }
+    }
+    console.log(ans);
+</script>
+
+</html>

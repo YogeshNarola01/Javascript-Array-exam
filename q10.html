@@ -1,0 +1,47 @@
+<html>
+<script type="text/javascript">
+    /*
+    10. Write a javascript program array  create 2d array and print boundary element.
+        let arr = [
+                [1,2,3,4,5],
+                [6,7,8,9,10],
+                [11,12,13,14,15],
+                [16,17,18,19,20]
+        ]
+
+        ans :- [1,2,3,4,5,10,15,20,19,18,17,16,11,6]
+    */
+
+    let arr = [
+        [1, 2, 3, 4, 5],
+        [6, 7, 8, 9, 10],
+        [11, 12, 13, 14, 15],
+        [16, 17, 18, 19, 20]
+    ]
+    let ans = [];
+    let tmp = 0;
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5; j++) {
+            if (i == 0||(i==1&&j==4)||(i==2&&j==4)) {
+                ans[tmp++] = arr[i][j];
+            }
+        }
+    }
+    for (let i = 0; i < 5; i++) {
+        for (let j = arr.length; j > 0; j--) {
+            if (i == 3) {
+                ans[tmp++] = arr[i][j];
+            }
+        }
+    }
+    for (let i = 0; i < 5; i++) {
+        for (let j =0; j < 5; j++) {
+            if (i==2&&j==0 || i==1&&j==0) {
+                ans[tmp++] = arr[i][j];
+            }
+        }
+    }
+    console.log(ans);
+</script>
+
+</html>
